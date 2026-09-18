@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piletas Leite | Revestimientos Aquavastions</title>
+  
+  <!-- Fuente elegante similar a la imagen -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+  <style>
+    /* VARIABLES DE COLORES (Arena y Turquesa Clarito) */
+    :root {
+      --bg-arena-claro: #F5EFE6;
+      --bg-arena-medio: #E8DFD1;
+      --turquesa-claro: #E0F4F7;
+      --turquesa-medio: #B2E0E6;
+      --turquesa-acento: #4AB2C0;
+      --texto-oscuro: #2C3E35;
+      --blanco: #FFFFFF;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+      background-color: var(--bg-arena-claro);
+      color: var(--texto-oscuro);
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Playfair Display', serif;
+    }
+
+    /* BARRA DE NAVEGACIÓN Y LOGO */
+    header {
+      background-color: var(--bg-arena-claro);
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-bottom: 20px;
+    }
+
+    nav a {
+      text-decoration: none;
+      color: var(--texto-oscuro);
+      font-size: 0.9rem;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .logo {
+      font-size: 2.2rem;
+      color: var(--texto-oscuro);
+      letter-spacing: 3px;
+    }
+
+    /* SECCIÓN 1: GALERÍA TRIPLE E INTRO */
+    .hero-gallery {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 20px;
+      display: grid;
+      grid-template-columns: 1fr 1.5fr 1fr;
+      gap: 20px;
+    }
+
+    .hero-gallery img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    .intro-text {
+      text-align: center;
+      max-width: 600px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    .btn-action {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 12px 30px;
+      background-color: var(--turquesa-acento);
+      color: var(--blanco);
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: 600;
+    }
+
+    /* CINTA SEPARADORA REPETITIVA */
+    .ticker-bar {
+      background-color: var(--turquesa-medio);
+      color: var(--texto-oscuro);
+      padding: 12px 0;
+      text-align: center;
+      font-size: 0.85rem;
+      letter-spacing: 3px;
+      font-weight: 600;
+    }
+
+    /* SECCIÓN 2: TARJETAS SOBRE IMAGEN */
+    .banner-cards {
+      position: relative;
+      background-color: var(--turquesa-claro);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .banner-cards h2 {
+      font-size: 2.2rem;
+      margin-bottom: 30px;
+    }
+
+    .cards-container {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: var(--blanco);
+      padding: 25px;
+      border-radius: 12px;
+      flex: 1;
+      min-width: 250px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    }
+
+    .card h3 {
+      color: var(--turquesa-acento);
+      margin-bottom: 10px;
+    }
+
+    /* SECCIÓN 3: PROCESO / CARRUSEL DESTACADO */
+    .featured-section {
+      background-color: var(--bg-arena-medio);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .featured-card {
+      max-width: 900px;
+      margin: 30px auto 0;
+      display: flex;
+      background-color: var(--bg-arena-claro);
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .featured-card img {
+      width: 50%;
+      height: 350px;
+      object-fit: cover;
+    }
+
+    .featured-content {
+      width: 50%;
+      padding: 40px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: left;
+    }
+
+    /* SECCIÓN 4: GALERÍA FINAL DE PROCESOS */
+    .bottom-gallery {
+      background-color: var(--turquesa-claro);
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .grid-4 {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+      max-width: 1100px;
+      margin: 30px auto 0;
+    }
+
+    .grid-4 img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 12px;
+    }
+
+    /* RESPONSIVE (MÓVILES) */
+    @media (max-width: 768px) {
+      .hero-gallery { grid-template-columns: 1fr; }
+      .featured-card { flex-direction: column; }
+      .featured-card img, .featured-content { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVEGACIÓN -->
+  <header>
+    <nav>
+      <a href="#inicio">Inicio</a>
+      <a href="#proceso">Proceso</a>
+      <a href="#piletas">Piletas</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <h1 class="logo">Piletas Leite</h1>
+  </header>
+
+  <!-- SECCIÓN 1: TRES FOTOS SUPERIORES -->
+  <section class="hero-gallery">
+    <img src="https://via.placeholder.com/400x500?text=Pileta+1" alt="Pileta Terminada">
+    <img src="https://via.placeholder.com/400x500?text=Proceso+de+Trabajo" alt="Proceso Revestimiento">
+    <img src="https://via.placeholder.com/400x500?text=Pileta+2" alt="Detalle Aquavastions">
+  </section>
+
+  <div class="intro-text">
+    <p>Especialistas en revestimientos Aquavastions tipo mármol pulido cementicio en Pilar, Buenos Aires[cite: 5]. Transformamos tu piscina con terminaciones de alta calidad y máxima durabilidad[cite: 5].</p>
+    <a href="https://wa.me/541130750728" target="_blank" class="btn-action">Contactar por WhatsApp</a>
+  </div>
+
+  <!-- CINTA TEXTO REPETITIVO -->
+  <div class="ticker-bar">
+    AQUAVASTIONS • MÁRMOL PULIDO CEMENTICIO • PILAR, BS. AS. • PILETAS LEITE[cite: 5]
+  </div>
+
+  <!-- SECCIÓN 2: TRES TARJETAS DE CARACTERÍSTICAS -->
+  <section class="banner-cards">
+    <h2>Nuestros Diferenciales</h2>
+    <div class="cards-container">
+      <div class="card">
+        <h3>Calidad Premium</h3>
+        <p>Aplicación técnica de revestimiento cementicio tipo mármol[cite: 5].</p>
+      </div>
+      <div class="card">
+        <h3>Durabilidad</h3>
+        <p>Materiales resistentes diseñados para soportar el agua y el sol[cite: 5].</p>
+      </div>
+      <div class="card">
+        <h3>Atención Personalizada</h3>
+        <p>Asesoramiento continuo desde el inicio hasta el llenado de tu pileta[cite: 5].</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 3: TRABAJO DESTACADO -->
+  <section class="featured-section" id="proceso">
+    <h2>¿Cómo trabajamos?</h2>
+    <div class="featured-card">
+      <img src="https://via.placeholder.com/500x500?text=Proceso+de+Pulido" alt="Proceso de Aplicación">
+      <div class="featured-content">
+        <h3>Proceso de Revestimiento</h3>
+        <p>Realizamos la preparación de la superficie, la aplicación del material y el pulido fino para lograr la textura suave única del mármol pulido[cite: 5].</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECCIÓN 4: GALERÍA INFERIOR DE FOTOS -->
+  <section class="bottom-gallery" id="piletas">
+    <h2>Galería de Procesos y Obras</h2>
+    <div class="grid-4">
+      <img src="https://via.placeholder.com/300x300?text=Paso+1" alt="Preparación">
+      <img src="https://via.placeholder.com/300x300?text=Paso+2" alt="Aplicación">
+      <img src="https://via.placeholder.com/300x300?text=Paso+3" alt="Pulido">
+      <img src="https://via.placeholder.com/300x300?text=Resultado" alt="Pileta Llena">
+    </div>
+  </section>
+
+</body>
+</html>
