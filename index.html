@@ -293,18 +293,18 @@
   
   <div style="display: flex; justify-content: center; align-items: center; gap: 30px; max-width: 1000px; margin: 30px auto 0; flex-wrap: wrap;">
     
-    <!-- Bloque Flotante 1: Texto a la izquierda -->
-    <div style="background-color: var(--bg-arena-claro); border-radius: 16px; padding: 40px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); flex: 1; min-width: 280px; max-width: 450px; text-align: left;">
-      <h3>Proceso de Revestimiento</h3>
-      <p>Realizamos la preparación de la superficie, la aplicación del material y el pulido fino para lograr la textura suave única del mármol pulido.</p>
-    </div>
-
-    <!-- Bloque Flotante 2: Video a la derecha (Tamaño estricto 320px x 320px) -->
-    <div style="background-color: var(--blanco); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); width: 320px; height: 320px; flex-shrink: 0; display: flex; justify-content: center; align-items: center;">
+    <!-- Bloque Flotante 1: Video a la izquierda (Ajustado a la proporción vertical del video) -->
+    <div style="background-color: var(--blanco); border-radius: 16px; overflow: hidden; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); width: 220px; height: 380px; flex-shrink: 0; display: flex; justify-content: center; align-items: center;">
       <video autoplay loop muted playsinline style="width: 100%; height: 100%; object-fit: cover; display: block;">
         <source src="revest.mp4" type="video/mp4">
         Tu navegador no soporta el reproductor de video.
       </video>
+    </div>
+
+    <!-- Bloque Flotante 2: Texto a la derecha -->
+    <div style="background-color: var(--bg-arena-claro); border-radius: 16px; padding: 40px; box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12); flex: 1; min-width: 280px; max-width: 450px; text-align: left;">
+      <h3>Proceso de Revestimiento</h3>
+      <p>Realizamos la preparación de la superficie, la aplicación del material y el pulido fino para lograr la textura suave única del mármol pulido.</p>
     </div>
 
   </div>
